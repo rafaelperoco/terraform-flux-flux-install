@@ -1,2 +1,2 @@
-# terraform-flux-module
-Terraform Flux module using official provider
+# Flux install module
+Terraform module to install FluxCD V2
