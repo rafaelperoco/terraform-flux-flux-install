@@ -54,8 +54,12 @@ variable "identity_pub_file" {
   description = "ssh identity pub file"
 }
 
+variable "known_hosts_file" {
+  type        = string
+  description = "ssh known hosts file"
+}
+
 variable "gitrepo_url" {
   type        = string
-  default     = ""
   description = "git repo url"
 }

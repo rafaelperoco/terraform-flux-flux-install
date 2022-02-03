@@ -15,6 +15,7 @@ data "template_file" "flux_apply" {
     flux_manifests    = var.flux_manifests
     identity_file     = trimspace(file(abspath(pathexpand(var.identity_file))))
     identity_pub_file = trimspace(file(abspath(pathexpand(var.identity_pub_file))))
+    known_hosts_file  = trimspace(file(abspath(pathexpand(var.known_hosts_file))))
   }
 }
 
@@ -25,5 +26,5 @@ data "kubectl_file_documents" "install" {
 
 
 data "kubectl_file_documents" "flux" {
-    content = data.template_file.flux_apply.rendered
+  content = data.template_file.flux_apply.rendered
 }

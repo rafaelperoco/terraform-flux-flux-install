@@ -14,5 +14,6 @@ locals {
     flux_manifests    = var.flux_manifests
     identity_file     = trimspace(file(abspath(pathexpand(var.identity_file))))
     identity_pub_file = trimspace(file(abspath(pathexpand(var.identity_pub_file))))
+    known_hosts_file  = trimspace(file(abspath(pathexpand(var.known_hosts_file))))
   }
 }

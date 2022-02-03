@@ -12,7 +12,7 @@ resource "kubectl_manifest" "install" {
 }
 
 resource "kubectl_manifest" "flux" {
-    for_each  = data.kubectl_file_documents.flux.manifests
-    yaml_body = each.value
-    depends_on = [kubernetes_namespace.flux_system]
+  for_each   = data.kubectl_file_documents.flux.manifests
+  yaml_body  = each.value
+  depends_on = [kubernetes_namespace.flux_system]
 }
