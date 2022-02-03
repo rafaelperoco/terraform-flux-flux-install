@@ -35,6 +35,7 @@ module "flux-install" {
   source  = "rafaelperoco/flux-install/flux"
 
   target_path = var.target_path
+  flux_manifests = var.flux_manifests
   gitrepository = var.gitrepository
   gitrepo_url = var.gitrepo_url
   gitbranch = var.gitbranch
