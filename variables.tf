@@ -34,7 +34,6 @@ variable "namespace" {
 
 variable "flux_manifests" {
   type        = string
-  default     = "cluster"
   description = "flux manifests"
 }
 
