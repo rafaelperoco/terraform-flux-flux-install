@@ -33,7 +33,7 @@ Basic usage of the module as follows:
 ```terraform
 module "flux-install" {
   source  = "rafaelperoco/flux-install/flux"
-  version = "0.0.3"
+  version = "0.1.0"
 
   target_path = var.target_path
   gitrepository = var.gitrepository
