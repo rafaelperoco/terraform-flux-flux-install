@@ -32,18 +32,19 @@ ssh-keyscan -H bitbucket.org >> $MY_PROJECT_PATH/known_hosts
 Basic usage of the module as follows:
 ```terraform
 module "flux-install" {
-  source  = "rafaelperoco/flux-install/flux"
-
-  target_path = var.target_path
-  flux_manifests = var.flux_manifests
-  gitrepository = var.gitrepository
-  gitrepo_url = var.gitrepo_url
-  gitbranch = var.gitbranch
-  interval = var.interval
-  identity_file = var.identity_file
+  source            = "rafaelperoco/flux-install/flux"
+  version           = "0.1.4"
+  target_path       = var.target_path
+  flux_manifests    = var.flux_manifests
+  gitrepository     = var.gitrepository
+  gitrepo_url       = var.gitrepo_url
+  gitbranch         = var.gitbranch
+  interval          = var.interval
+  identity_file     = var.identity_file
   identity_pub_file = var.identity_pub_file
-  known_hosts_file = var.known_hosts_file
+  known_hosts_file  = var.known_hosts_file
 }
+
 ```
 
 terraform.tfvars
