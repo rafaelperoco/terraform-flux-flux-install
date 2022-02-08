@@ -59,3 +59,10 @@ gitrepository = "my-cluster-with-flux"
 interval = "1m0s"
 gitbranch = "main"
 ```
+
+providers.tf
+```terraform
+provider "kubernetes" {
+  config_path = "~/.kube/config"
+}
+```
