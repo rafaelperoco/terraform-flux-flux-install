@@ -5,7 +5,10 @@ variable "target_path" {
 
 variable "components_extra" {
   type        = list(string)
-  default     = []
+  default     = [
+    "image-reflector-controller",
+    "image-automation-controller"
+  ]
   description = "extra flux components"
 }
 
